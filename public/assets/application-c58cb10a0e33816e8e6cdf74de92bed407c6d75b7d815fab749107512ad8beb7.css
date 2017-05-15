@@ -1,0 +1,249 @@
+/*css.css*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html{
+
+}
+/* htmlに直接記述済み*/
+
+body{
+  font-family:serif,Arial;
+  background-image:url('/images/artrave02.jpg');
+  background-size:cover;
+  background-attachment: fixed;
+  height:100%;
+}
+
+img{
+  max-width:100%;
+}
+
+.center{
+  text-align:center;
+  margin:15px;
+}
+
+#box{
+  width:70%;
+  margin:0 auto;
+  margin-top: 5%;
+}
+
+.title{
+  color:white;
+  font-size:250%;
+
+}
+
+.cover{
+  margin-bottom: 20%;
+}
+.cover img{
+  width:400px;
+  height:400px;
+}
+}
+.navbar-brand{
+  font-size: bold;
+}
+
+#sidebar li{
+  font-size:120%;
+}
+
+#footer{
+font-size:12px;
+font-color:#ccc;
+text-align:center;
+border-top: 1px solid #ccc;
+padding:10px 0 20px;
+margin-top:20px;
+}
+
+
+#ml{
+  font-size:20px;
+  border-bottom:none;
+  margin:none;
+  text-align:left;
+}
+
+
+#about{
+  width:400px;
+  margin:0 auto;
+}
+
+img {
+max-width : 100% ;
+height : auto ;
+}
+
+.contents{
+  margin:8% 0;
+  text-align:center;
+}
+.movie{
+position:relative;
+width:100%;
+padding-top:56.25%;
+}
+
+.movie iframe{
+position:absolute;
+top:0;
+right:0;
+width:100%;
+height:100%;
+}
+
+.row>img{
+  max-width : 100% ;
+height : auto ;
+}
+
+#welcome{
+
+}
+
+h1{
+  color:red !important;
+  text-align:center;
+  margin-top:500px;
+}
+h2,h3  {
+  font-weight:bold;
+}
+
+.explain{
+ font-size:200%;
+ margin-right:3%;
+ color:white;
+ text-align:right;
+
+}
+
+.place{
+  text-align:right;
+  color:#778899;
+  margin-right:3%;
+}
+
+.image{
+  margin:10% 0;
+}
+
+p{
+  color:white;
+}
+
+.link{
+  color:white;
+}
+.link:hover{
+  text-decoration: none;
+color:red;
+}
+
+#black{
+  background-color: black !important;
+}
+
+nav ul li{
+  color:white !important;
+}
+
+.container1{
+  margin:3%;
+}
+
+
+#last{
+  margin-bottom:30px;
+color:black;
+}
+
+#famecover{
+  margin-top: 10%;
+}
+#fame{
+width:100% ;
+border-collapse: separate;
+border-spacing: 0px;
+border-top: 1px solid #ccc;
+border-left: 1px solid #ccc;
+}
+#fame th{
+width:5%;
+height:5%;
+padding:4px;
+text-align: center;
+vertical-align: top;
+color:white;
+ background-color: rgba(0, 0, 0, 0.5);
+border-left: 3px solid #ccc;
+border-top: 1px solid #ccc;
+
+border-bottom: 1px solid #ccc;
+}
+#fame td{
+  font-size:120%;
+width:75%;
+margin-left:;
+padding-left:5%;
+ color:white;
+    background-color: rgba(0, 0, 0, 0.5);
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+}
+
+#sidebar  a{
+color:#fa8072;
+}
+
+#sidebar a{
+  text-decoration:none;
+}
+
+#sidebar ul{
+list-style-type:none;
+}
+ #sidebar li{
+  margin-left:-20px;
+ }
+#sidebar a:hover{
+  background:white;
+}
+
+#singlelist {
+  width:700px;
+}
+
+#singlelist a:hover img{
+  opacity: 0.7;
+  filter: alpha(opacity=60);
+}
+
+#Unicornimg{
+  zoom:1.5;
+}
+#Paparazzi {
+  display:none;
+}
+
+#BadRomance{
+  display:none;
+}
+
+#Unicorn{
+  display:none;
+}
+
+.pink{
+  font-color:#fa8072;
+}
+/* スマホ対応*/
+/*
+*= require_directory .

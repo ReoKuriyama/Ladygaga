@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gaga</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= include_gon %>
+ <%= javascript_include_tag "application" %>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="/assets/jquery.bxslider.css" rel="stylesheet" />
+    <link href="/assets/devise_sign_in.css" rel="stylesheet" />
+    <link href="/assets/news.css" rel="stylesheet" />
+    <link href="/assets/form.css" rel="stylesheet" />
+    <link href="/assets/musiclist.css.scss" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- 1.ナビゲーションバーの設定 -->
+  <nav class="navbar">
+      <div class="container">
+          <!-- 2.ヘッダ情報 -->
+          <div class="navbar-header">
+              <a class="navbar-brand" style="color:#fa8072; ">Lady Gaga </a>
+          </div>
+          <!-- 3.リストの配置 -->
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="/gagas" style="color:white">Live</a></li>
+              <li><a href="/MusicList" style= "color:white">MusicList</a></li>
+              <li><a href="/news" style= "color:white">News</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+              <% if user_signed_in? %>
+               <li style= "color:white"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+               <li style= "color:white"><a class="post" href="/gagas/edit">Edit</a></li>
+               <% else %>
+               <li>
+               <%= link_to "管理者", new_user_session_path, class: 'post' %>
+             </li>
+             <!--
+             <li>
+             <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+           </li>
+           -->
+                <% end %>
+          </ul>
+      </div>
+  </nav>
+
+
+    <%= yield %>
+
+
+
+  <div id="footer">copywright2015,btwball.com</div>
+</body>
+</html>

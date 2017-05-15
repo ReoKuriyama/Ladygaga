@@ -1,0 +1,27 @@
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-2 margin">
+    </div>
+
+    <div class="col-sm-8">
+      <ul>
+       <% @news.each do |news| %>
+        <li class="news_content">
+          <h2 class="news_title"><%= news.title %></h2>
+          <p class="time"><%= news.time %></p>
+          <img class="news_image" src='/assets/<%= news.image_url %>'>
+          <p><%= news.content %></p>
+          <p class="right">
+            <a href="/news/<%= news.id %>">read more!</a>
+          </p>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col-sm-2 margin">
+    </div>
+  </div>
+</div><!--   container   ->

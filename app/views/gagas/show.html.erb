@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-2 margin">
+    </div>
+
+    <div class="col-sm-8">
+      <ul>
+       <% @news.each do |news| %>
+        <li class="news_content">
+          <h2 class="news_title" style="margin-bottom:20px"><%= news.title %></h2>
+          <img class="news_image" src='/assets/<%= news.image_url %>'>
+          <p><%= news.content %></p>
+          <p><%= news.sentence %></p>
+          <% if user_signed_in? %>
+          <div class="delete_btn">
+          <%= link_to '削除', "/news/#{news.id}", method: :delete %>
+           </div>
+          <% end %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col-sm-2 margin">
+    </div>
+  </div>
+</div><!--   container   ->
