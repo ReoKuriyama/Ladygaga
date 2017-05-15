@@ -12,6 +12,7 @@ tmp/*
 .byebug_history
 *.pid
 *.log
+*.cache
 
  log/*　　　
  log/**/*
