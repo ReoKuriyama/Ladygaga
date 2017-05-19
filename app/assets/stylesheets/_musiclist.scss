@@ -1,0 +1,53 @@
+#fame {
+  background-image: url(/assets/pokerfacewall.jpg);
+}
+
+#FameMonster {
+  background-image: url(/assets/monster_img.jpg);
+}
+
+#BornThisWay {
+  background-image: url(/assets/btw.jpg);
+}
+
+#ArtPop {
+  background-image: url(/assets/Artpop_img.jpg);
+}
+
+#Joanne {
+  background-image: url(/assets/Joanne_img.jpg);
+}
+
+.cover_img {
+  background-position: center center;
+
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+#musiclist-contents li {
+  margin: 0;
+  padding:0;
+  list-style:none
+}
+
+#musiclist-contents ul {
+  margin: 0;
+  padding: 0;
+
+}
+
+.cover {
+  width: 20%;
+  min-width: 300px;
+  height: auto;
+}

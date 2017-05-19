@@ -1,79 +1,100 @@
-
-
- <!--<div id="welcome">
+<!--<div id="welcome">
   <img src="assets/opening1.jpg">
- </div>  -->
+</div>  -->
 
 
-
-<div id="maincontents">
-<div id="box">
-  <ul class="bxslider">
-   <li><a href="#Unicornimg"><img src="assets/Highway_Unicorn_Milan.jpg"></a></li>
-   <li><a href="#Paparazziimg" ><img src="assets/lady-gaga-2009-mtv-vma.jpg"></a></li>
-   <li><img src="assets/BornThisWayBallinSydney.jpg"></li>
-   <li><a href="#BadRomanceimg"><%= image_tag 'BadRomance.jpg' %></a></li>
-  </ul>
- </div>
+<div id="live-contents">
+  <div id="box">
+    <ul class="bxslider">
+      <li>
+        <a href="#Unicornimg"><img src="assets/Highway_Unicorn_Milan.jpg">
+        </a>
+      </li>
+      <li>
+        <a href="#Paparazziimg"><img src="assets/lady-gaga-2009-mtv-vma.jpg">
+        </a>
+      </li>
+      <li><img src="assets/BornThisWayBallinSydney.jpg">
+      </li>
+      <li>
+        <a href="#BadRomanceimg">
+          <%= image_tag 'BadRomance.jpg' %>
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <div class="container">
-   <div class="row">
-    <div class="col-sm-1">
+    <div class="row">
+      <div class="col-sm-1">
+      </div>
+      <div id="main" class="col-sm-8">
+
+
+        <ul class="live-contents">
+          <% @video.each do |video| %>
+            <li style="margin-top:100px">
+              <img id="<%= video.title %>img" src="assets/<%= video.img_url %>">
+              <div style="display:none" id="<%= video.title %>">
+                <div class='movie'>
+                  <iframe src="<%= video.video_url %>" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <h3 class="video-explain"> <a href=""><%= video.title %> </a></h3>
+              <p class="place">
+                <%= video.location %>
+              </p>
+              <% if user_signed_in? %>
+                <div class="delete_btn">
+                  <%= link_to '削除', "/gagas/#{video.id}", method: :delete, :onclick=>"disp(); return false;" %>
+                </div>
+                <% end %>
+            </li>
+            <% end %>
+        </ul>
+      </div>
+
+      <div class="col-sm-1">
+      </div>
+
+      <!--********** #SideBar***********-->
+
+      <div class="col-sm-2" id="sidebar">
+        <h3 style="color:white">Music List</h3>
+        <ul>
+          <% @video.each do |video| %>
+            <li>
+              <a href="#<%= video.title %>img">
+                <%= video.title %>
+              </a>
+            </li>
+            <% end -%>
+              <p id="last">coming soon</p>
+        </ul>
+
+        <!-- twitter 埋め込み-->
+        <h3 style="color:white"> Twitter</a></h3>
+
+        <a class="twitter-timeline" data-chrome="nofooter noheader noborderst" width="200" height="500" href="https://twitter.com/ladygaga" data-widget-id="604613443040079872">@ladygagaさんのツイート</a>
+        <script>
+          ! function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+              p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = p + "://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          }(document, "script", "twitter-wjs");
+
+        </script>
+
+      </div>
+      <!-- #sidebar -->
     </div>
-    <div id="main" class="col-sm-8">
-
-
-     <ul class="contents">
-      <% @video.each do |video| %>
-      <li style="margin-top:100px">
-      <img id="<%= video.title %>img" src="assets/<%= video.img_url %>">
-        <div  style="display:none" id="<%= video.title %>" >
-          <div class='movie'>
-            <iframe  src="<%= video.video_url %>" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-          <h3 class="explain"> <a class="link" href=""> <%= video.title %> </a></h3>
-          <p class="place"><%= video.location %> </p>
-          <% if user_signed_in? %>
-            <div class="delete_btn">
-            <%= link_to '削除', "/gagas/#{video.id}", method: :delete, :onclick=>"disp(); return false;" %>
-            </div>
-          <% end %>
-       </li>
-      <% end %>
-    </ul>
-    </div>
-
-            <div class="col-sm-1">
-            </div>
-
-
-                <!--********** #SideBar***********-->
-
-
-              <div class="col-sm-2" id="sidebar">
-                <h3 style="color:white">Music List</h3>
-                <ul>
-                <% @video.each do |video| %>
-                 <li><a href="#<%= video.title %>img"><%= video.title %></a></li>
-                <% end -%>
-                <p id="last">coming soon</p>
-                </ul>
-
-                <!-- twitter 埋め込み-->
-              <h3 style="color:white"> Twitter</a></h3>
-
-              <a class="twitter-timeline"  data-chrome="nofooter noheader noborderst" width="200" height="500" href="https://twitter.com/ladygaga" data-widget-id="604613443040079872">@ladygagaさんのツイート</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-              </div> <!-- #sidebar -->
-            </div><!--#row-->
-          </div><!--#container-->
-          </div><!--  maincontents  -->
-
-
-
-<!--    <h2 id="LoveGame">Love Game</h2>
-    <div class="iframe-content"><iframe src="https://www.youtube.com/embed/QbZPp3m5kAE" frameborder="0" allowfullscreen></iframe>
-   </div>
--->
+    <!--#row-->
+  </div>
+  <!--#container-->
+</div>
+<!--  maincontents  -->

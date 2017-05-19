@@ -1,0 +1,34 @@
+/*css.css*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* htmlに直接記述済み*/
+
+body {
+  font-family: serif,Arial;
+  /*background-image:  url(/assets/artrave02.jpg);*/
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: black;
+  height: 100%;
+  min-height: 500px;
+}
+
+p {
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#footer {
+  font-size: 12px;
+  font-color: #ccc;
+  text-align: center;
+  border-top:  1px solid #ccc;
+  padding: 10px 0 20px;
+  margin-top: 20px;
+}
+
