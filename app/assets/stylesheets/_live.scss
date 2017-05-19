@@ -1,0 +1,77 @@
+#live-contents{
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+#box {
+  width: 70%;
+  margin: 0 auto;
+  margin-top:  5%;
+}
+
+.live-contents {
+  margin: 8% 0;
+  text-align: center;
+}
+.live-contents img {
+  position: relative;
+}
+
+.movie {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.movie iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.row>img {
+  max-width :  100% ;
+  height :  auto ;
+}
+
+.video-explain {
+  font-size: 200%;
+  margin-right: 3%;
+  color: white;
+  text-align: right;
+}
+
+.video-explain a {
+  color: white;
+}
+
+.place {
+  text-align: right;
+  color: #778899;
+  margin-right: 3%;
+}
+
+#last {
+  margin-bottom: 30px;
+  color: white;
+}
+
+#sidebar a {
+  color: #fa8072;
+  text-decoration: none;
+}
+
+#sidebar ul {
+  list-style-type: none;
+}
+
+#sidebar li {
+  margin-left: -20px;
+  font-size: 16px;
+ }
+
+#Unicornimg {
+  zoom: 1.5;
+}

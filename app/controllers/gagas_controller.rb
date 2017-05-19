@@ -37,6 +37,10 @@ class GagasController < ApplicationController
       params.permit(:title, :location, :video_url, :img_url)
     end
 
+    def news_params
+      params.permit(:title, :content, :time, :image_url, :sentence)
+    end
+
     def move_to_index
       redirect_to action: :index unless user_signed_in?
     end
